@@ -1,0 +1,84 @@
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #fe9859;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+@media (max-width: 760px) {
+  .float {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+.my-float {
+  margin-top: 16px;
+}
+
+.dark-bg {
+  background: #000;
+}
+.slick-slide {
+  /* width: 600px !important; */
+  /* padding: 10px; */
+  background-color: black;
+}
+.slick-list {
+  /* padding: 0px 0px !important; */
+}
+.slick-slide .details {
+  color: white;
+  display: none;
+}
+
+.slick-current .details {
+  display: block !important;
+}
+
+.slick-slider iframe {
+  width: 100% !important;
+  height: 480px;
+  padding: 0 20px !important;
+}
+
+iframe {
+  width: 100% !important;
+  min-height: 380px;
+}
+.ytp-title-text {
+  display: none !important;
+}
+.details {
+  position: absolute;
+  bottom: 0px;
+  padding: 0 20px;
+}
+.details h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.details p {
+  margin: 0;
+}
+
+.slick-next {
+  right: 60px !important;
+}
+.slick-prev {
+  left: 57px !important;
+  position: absolute !important;
+  bottom: 0;
+  z-index: 99;
+}
+.page-img {
+  width: 100%;
+}
