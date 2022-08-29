@@ -6,6 +6,7 @@ function About() {
       <img
         className="page-img"
         src="https://www.sony.com/en/SonyInfo/l8qsi6000000pr06-img/KV_PC.jpg"
+        alt="u"
       />
       <div className="inner">
         <br />

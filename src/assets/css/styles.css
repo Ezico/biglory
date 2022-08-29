@@ -5,7 +5,33 @@
 .tmpl_displayOff {
   display: none;
 }
-
+.slick-next {
+  right: 60px !important;
+  z-index: 99999 !important;
+}
+@media (max-width: 760px) {
+  .desktop {
+    display: none;
+  }
+  .slick-slider {
+    padding: 0px;
+    /* width: fit-content !important; */
+  }
+  .slick-slider iframe {
+    width: 100% !important;
+    height: fit-content !important;
+    padding: 0 20px !important;
+  }
+}
+@media (min-width: 780px) {
+  .mobile {
+    display: none;
+  }
+}
+.dark-bg {
+  background: #000;
+  overflow: hidden;
+}
 /* @media screen and (max-width: 640px) {
   #tmpl_content {
     padding-top: 64px;

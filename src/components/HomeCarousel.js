@@ -4,8 +4,8 @@ import Slider from "react-slick";
 import { db } from "../firebase";
 
 function HomeCarousel() {
-  const settings = {
-    className: "center",
+  const settings1 = {
+    className: "desktop",
     centerMode: true,
     infinite: true,
     autoplay: false,
@@ -41,9 +41,21 @@ function HomeCarousel() {
       },
     ],
   };
+  const settings2 = {
+    className: "mobile",
+    centerMode: true,
+    centerPadding: "0px",
+    infinite: true,
+    autoplay: false,
+
+    slidesToShow: 1,
+    speed: 500,
+    dots: true,
+    arrow: true,
+  };
 
   const [data, setData] = React.useState([]);
-
+  const [dataMobile, setdataMobile] = React.useState([]);
   React.useEffect(() => {
     const fetchData = async () => {
       let list = [];
@@ -61,6 +73,7 @@ function HomeCarousel() {
         });
 
         setData(list);
+        setdataMobile(list);
       } catch (err) {}
     };
     fetchData();
@@ -89,8 +102,23 @@ function HomeCarousel() {
 
   return (
     <div className="dark-bg">
-      <Slider {...settings}>
+      <Slider {...settings1}>
         {data.map((d) => (
+          <div key={d.id}>
+            <iframe
+              width="560"
+              height="315"
+              src={d.Embeded}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        ))}
+      </Slider>
+      <Slider {...settings2}>
+        {dataMobile.map((d) => (
           <div key={d.id}>
             <iframe
               width="560"

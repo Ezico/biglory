@@ -29,6 +29,7 @@ function Navbar(props) {
           </h1>
 
           <a
+            href="/#"
             onClick={handleToggle}
             class="tmpl-header_hamburger tmpl-headerHamburger"
             tabindex="0"
@@ -135,7 +136,7 @@ function Navbar(props) {
                     <a href="/my-account">My Account</a>
                   </li>
                   <li>
-                    <a onClick={handleLogout} href="#">
+                    <a onClick={handleLogout} href="/#">
                       Logout
                     </a>
                   </li>

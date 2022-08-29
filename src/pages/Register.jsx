@@ -19,10 +19,9 @@ function Register() {
         navigate("/account/login");
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
         setError(true);
-        console.log(error);
+        console.log(errorMessage);
       });
   };
 
